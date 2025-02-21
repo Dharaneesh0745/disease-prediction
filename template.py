@@ -17,6 +17,7 @@ list_of_files = [
     f"src/{project_name}/pipeline/__init__.py",
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/constants/__init__.py",
+    "main.py",
     "config/config.yaml",
     "dvc.yaml",
     "params.yaml",
@@ -42,6 +43,6 @@ for filePath in list_of_files:
             logging.info(f"Creating empty file: {filePath}")
             
     else:
-        logging.info(f"{filename} is already exists")
+        logging.info(f"{filePath} is already exists")
         
     
