@@ -1,0 +1,31 @@
+## base model preperation pipeline creation
+
+from kidneyDiseaseClassifier.config.configuration import ConfigurationManager
+from kidneyDiseaseClassifier.components.model_training import Training
+from kidneyDiseaseClassifier import logger
+
+STAGE_NAME = "03 - Stage => Model Training"
+
+class ModelTrainingPipeline:
+    def __init__(self):
+        pass
+
+    def main(self):
+        config = ConfigurationManager()
+        training_config = config.get_training_config()
+        training = Training(config=training_config)
+        training.get_base_model()
+        training.train_valid_generator()
+        training.train()
+
+
+if __name__ == '__main__':
+    try:
+        logger.info(f"*******************")
+        logger.info(f">>>>>> {STAGE_NAME} started. <<<<<<")
+        obj = ModelTrainingPipeline()
+        obj.main()
+        logger.info(f">>>>>> {STAGE_NAME} completed. <<<<<<\n\nx==========x")
+    except Exception as e:
+        logger.exception(e)
+        raise e

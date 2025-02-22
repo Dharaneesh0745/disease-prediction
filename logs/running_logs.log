@@ -76,3 +76,40 @@ NameError: name 'PrepareBaseModel' is not defined
 [2025-02-22 06:31:50,515: INFO: main: >>>>>> 02 - Stage => Prepare Base Model completed. <<<<<<
 
 x==========x]
+[2025-02-22 06:45:20,743: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-22 06:45:20,746: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-22 06:45:20,750: INFO: common: created directory at: artifacts]
+[2025-02-22 06:45:20,752: INFO: common: created directory at: artifacts\training]
+[2025-02-22 06:49:14,874: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-22 06:49:14,877: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-22 06:49:14,880: INFO: common: created directory at: artifacts]
+[2025-02-22 06:49:14,881: INFO: common: created directory at: artifacts\training]
+[2025-02-22 08:46:46,335: INFO: main: *******************]
+[2025-02-22 08:46:46,335: INFO: main: >>>>>> 03 - Stage => Model Training started. <<<<<<]
+[2025-02-22 08:46:46,335: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-22 08:46:46,342: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-22 08:46:46,342: INFO: common: created directory at: artifacts]
+[2025-02-22 08:46:46,342: ERROR: main: name 'os' is not defined]
+Traceback (most recent call last):
+  File "main.py", line 35, in <module>
+    model_trainer.main()
+  File "C:\Users\DHARANEESH\My Projects\Disease Prediction\disease-prediction\src\kidneyDiseaseClassifier\pipeline\stage_03_model_training.py", line 15, in main
+    training_config = config.get_training_config()
+  File "c:\users\dharaneesh\my projects\disease prediction\disease-prediction\src\kidneyDiseaseClassifier\config\configuration.py", line 59, in get_training_config
+    training_data = os.path.join(self.config.data_ingestion.unzip_dir, "CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone")
+NameError: name 'os' is not defined
+[2025-02-22 08:47:29,625: INFO: main: *******************]
+[2025-02-22 08:47:29,625: INFO: main: >>>>>> 03 - Stage => Model Training started. <<<<<<]
+[2025-02-22 08:47:29,641: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-22 08:47:29,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-22 08:47:29,641: INFO: common: created directory at: artifacts]
+[2025-02-22 08:47:29,641: INFO: common: created directory at: artifacts\training]
+[2025-02-22 08:48:16,172: INFO: main: *******************]
+[2025-02-22 08:48:16,172: INFO: main: >>>>>> 03 - Stage => Model Training started. <<<<<<]
+[2025-02-22 08:48:16,172: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-02-22 08:48:16,172: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-22 08:48:16,172: INFO: common: created directory at: artifacts]
+[2025-02-22 08:48:16,172: INFO: common: created directory at: artifacts\training]
+[2025-02-22 10:12:05,241: INFO: main: >>>>>> 03 - Stage => Model Training completed. <<<<<<
+
+x==========x]
