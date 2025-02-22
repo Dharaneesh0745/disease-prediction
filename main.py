@@ -1,3 +1,13 @@
 from src.kidneyDiseaseClassifier import logger
+from src.kidneyDiseaseClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Welcome to custom log | Created by Dharaneesh")
+
+STAGE_NAME = "01 - Stage => Data Ingestion"
+try:
+    logger.info(f">>>>>> 01 - Stage {STAGE_NAME} started. <<<<<<")
+    obj = DataIngestionTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> 01 - Stage {STAGE_NAME} completed. <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
